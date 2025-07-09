@@ -1,0 +1,45 @@
+What is it?
+A Quantum Cloning Attack is an eavesdropping strategy used against quantum communication protocols — especially Quantum Key Distribution (QKD). The attacker (often called Eve) tries to copy quantum states being transmitted between legitimate parties (Alice and Bob) in order to extract information without being detected.
+
+🧠 But Cloning is Forbidden in Quantum Mechanics
+The no-cloning theorem tells us:
+
+It is impossible to make a perfect copy of an unknown quantum state.
+
+So how does Eve attack?
+
+She uses approximate (imperfect) cloning, such as with a Universal Quantum Cloning Machine (UQCM) — a type of quantum device that creates imperfect copies of qubits with maximum possible fidelity.
+
+🛠️ How the Attack Works
+Alice sends quantum bits (qubits) over a quantum channel (like in BB84 protocol).
+
+Eve intercepts each qubit and applies the cloning machine.
+
+She keeps one clone and sends the other (original or copy) to Bob, hoping he won't notice.
+
+Later, when Alice and Bob publicly reveal the bases they used, Eve measures her copy accordingly and tries to learn their key.
+
+⚠️ Consequences
+Because the clones are imperfect, Bob's measurements are affected.
+
+This introduces errors (quantum bit error rate, QBER) into the key.
+
+If the error exceeds a threshold (e.g., 11% in BB84), Alice and Bob know the channel was compromised and abort the key.
+
+✅ Why It's Important
+Studying Quantum Cloning Attacks helps:
+
+Understand limits of quantum security
+
+Design stronger protocols
+
+Simulate how real-world quantum hackers might try to break QKD
+
+🧪 Bonus
+In your notebook quantum_cloning_attack.ipynb, you're likely simulating:
+
+A BB84 or similar QKD protocol
+
+The effect of a cloning attack
+
+How error rates increase and security degrades
